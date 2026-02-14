@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small, optional design tokens that mirror your existing vars */
+:root {
+  --accent: theme("colors.brand.DEFAULT");
+}
+
+/* Example component using Tailwind utilities (optional) */
+.btn-tw {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold;
+}
+.btn-tw--primary {
+  @apply text-slate-900 bg-[linear-gradient(90deg,#00bcd4,#00e5ff)] shadow-md;
+}
+.btn-tw--secondary {
+  @apply text-slate-100 border border-white/10 bg-transparent;
+}
