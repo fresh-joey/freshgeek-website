@@ -1,0 +1,63 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#00bcd4;
+  --text:#e6eef6;
+  --radius:10px;
+  --max-width:1100px;
+  --gap:1.25rem;
+  --ff:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff);
+  background:linear-gradient(180deg,#071029 0%, #071623 100%);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;
+  max-width:var(--max-width);margin:0 auto;
+}
+.brand{font-weight:700;color:var(--text);text-decoration:none}
+.nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.25rem}
+.site-nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.site-nav a.cta{background:var(--accent);color:#051018;padding:.5rem .75rem;border-radius:6px}
+.hero{padding:4rem 0;text-align:center}
+.hero-inner{max-width:900px;margin:0 auto}
+.hero h1{font-size:2rem;margin:.25rem 0}
+.hero p{color:var(--muted);max-width:60ch;margin:.5rem auto}
+.hero-ctas .btn{margin:0 .5rem}
+.btn{
+  display:inline-block;padding:.6rem .9rem;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--text);text-decoration:none
+}
+.btn.primary{background:var(--accent);color:#051018;border:0}
+
+.services-preview,.portfolio-preview{padding:2rem 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:10px}
+.center{text-align:center}
+.case{background:var(--card);padding:1rem;border-radius:10px;margin-bottom:1rem}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.site-footer{padding:2rem;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:3rem}
+
+/* Forms */
+form label{display:block;margin-bottom:1rem}
+input[type="text"],input[type="email"],textarea{
+  width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:transparent;color:var(--text)
+}
+
+/* Responsive nav */
+@media (max-width:800px){
+  .nav-toggle{display:block}
+  .site-nav{position:fixed;right:0;top:0;background:#051018;height:100vh;width:260px;transform:translateX(100%);transition:transform .22s;padding:3rem 1rem}
+  .site-nav.open{transform:translateX(0)}
+  .site-nav a{display:block;margin:1rem 0}
+  .site-header{padding:1rem}
+}

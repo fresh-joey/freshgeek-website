@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — FreshGeek</title>
+  <meta name="description" content="Case studies and outcomes." />
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">FreshGeek</a>
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a class="cta" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Portfolio</h1>
+
+    <article class="case">
+      <h2>Platform HA redesign</h2>
+      <p>Problem: Frequent outages during peak. Solution: Multi-AZ design, cached sessions, health checks. Outcome: <strong>Downtime reduced by 99%</strong>.</p>
+      <p class="muted">Tech: AWS, Terraform, HAProxy, Redis</p>
+    </article>
+
+    <article class="case">
+      <h2>CI/CD & Testing</h2>
+      <p>Problem: Manual releases. Solution: Automated pipelines with feature branches, automated tests, rollback strategy. Outcome: <strong>Release lead time reduced from days to minutes</strong>.</p>
+      <p class="muted">Tech: GitHub Actions, Docker, Kubernetes</p>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="yearPortfolio"></span> Your Name</p>
+  </footer>
+</body>
+</html>
